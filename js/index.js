@@ -40,3 +40,73 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// console.log(document.domain);
+// console.log(document.URL);
+// console.log(document.title);
+//Nav Insert
+// document.body.children[0].children[1].setAttribute('href', 'foo')
+
+
+
+
+
+// var navBar = document.body.children[0].children[1]
+// navBar.children[0].textContent = potato
+
+
+
+
+
+
+
+// const aNode = document.createElement('a');
+// const a = document.createTextNode('New Item 1');
+// aNode.appendChild(a);
+// document.getElementsByTagName('nav').appendChild(aNode);
+
+// const parent = document.querySelector('nav');
+// var b = document.createElement('a');
+// parent.prepend('First A', a);
+
+// let h1Cta = document.querySelector("h1");
+// h1Cta.textContent = siteContent.cta.h1;
+// h1Cta.setAttribute('style', 'width: 40%');
+//              alert for changes
+
+// const paragraphs = document.getElementsByTagName("p");
+// // paragraphs[0] is the first <p> element
+// // paragraphs[1] is the second <p> element, etc.
+// alert(paragraphs[0].nodeName);
+
+const navBar = document.querySelector('nav').querySelectorAll('a');
+console.log(navBar)
+navBar.forEach((element, i) => {
+  // if (i !== 0 && i !== 7)
+    element.textContent = siteContent.nav[`nav-item-${i+1}`];
+  element.style.color = "green";
+});
+
+
+
+
+
+
+// const links = document.querySelector('nav').querySelectorAll('a')
+// let links = .map((url, i) `<a href="${navBar}">Link#${i + 1}</a>`);
+
+
+
+
+// // my two nav items
+// let nav = document.getElementsByTagName('nav')[0];
+
+// let navItem1 = document.createElement('a');
+// navItem1.textContent = 'FAQ';
+// navItem1.style.color = 'green';
+// nav.prepend(navItem1);
+
+// let navItem2 = document.createElement('a');
+// navItem2.textContent = 'Help';
+// navItem2.style.color = 'green';
+// nav.appendChild(navItem2);
