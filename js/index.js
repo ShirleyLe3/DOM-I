@@ -41,21 +41,6 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// console.log(document.domain);
-// console.log(document.URL);
-// console.log(document.title);
-//Nav Insert
-// document.body.children[0].children[1].setAttribute('href', 'foo')
-
-
-
-
-
-// var navBar = document.body.children[0].children[1]
-// navBar.children[0].textContent = potato
-
-
-
 
 
 
@@ -79,34 +64,56 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // // paragraphs[1] is the second <p> element, etc.
 // alert(paragraphs[0].nodeName);
 
-const navBar = document.querySelector('nav').querySelectorAll('a');
-console.log(navBar)
-navBar.forEach((element, i) => {
-  // if (i !== 0 && i !== 7)
+
+//Nav Insert
+// document.body.children[0].children[1].setAttribute('href', 'foo')
+
+//     Nav Links
+const navLinks = document.querySelector('nav').querySelectorAll('a');
+console.log(navLinks)
+navLinks.forEach((element, i) => {
     element.textContent = siteContent.nav[`nav-item-${i+1}`];
   element.style.color = "green";
 });
 
+// Nav image
+// const navImg = document.querySelector('nav').querySelectorAll('a');
 
 
 
 
 
-// const links = document.querySelector('nav').querySelectorAll('a')
-// let links = .map((url, i) `<a href="${navBar}">Link#${i + 1}</a>`);
+
+
+//        Title Container
+const titleText = document.getElementsByClassName('cta-text');
+console.log(titleText);
+
+const titleImg = document.getElementsByIdName('cta-img');
+titleImg.setAttribute('src', 'header-img.png');
+
+
+
+//         Main Content
+const content1 = document.getElementsByClassName('top-content').querySelector('div');
+
+const middleImg = document.querySelector('middle-img');
+middleImg.setAttribute('src', 'mid-page-accent.jpg');
+
+
+const content2 = document.getElementsByClassName('bottom-content').querySelector('div');
 
 
 
 
-// // my two nav items
-// let nav = document.getElementsByTagName('nav')[0];
 
-// let navItem1 = document.createElement('a');
-// navItem1.textContent = 'FAQ';
-// navItem1.style.color = 'green';
-// nav.prepend(navItem1);
 
-// let navItem2 = document.createElement('a');
-// navItem2.textContent = 'Help';
-// navItem2.style.color = 'green';
-// nav.appendChild(navItem2);
+//          Contact
+const contact = document.querySelector('nav').querySelectorAll('a');
+
+
+
+//          Footer
+const footer = document.querySelector('list-group-item: last-child');
+
+.querySelector('p');

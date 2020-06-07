@@ -1,3 +1,5 @@
+//https://www.digitalocean.com/community/tutorials/how-to-modify-attributes-classes-and-styles-in-the-dom
+
 //                 view element
 
 console.log(document.domain);
@@ -12,6 +14,26 @@ var header = document.getElementById('header');
 console.log(header);
 header.textContent = siteContent;
 
+
+document.getElementById(id)
+document.getElementsByTagName(name)
+document.createElement(name)
+parentNode.appendChild(node)
+element.innerHTML
+element.style.left
+element.setAttribute()
+element.getAttribute()
+element.addEventListener()
+window.content
+window.onload
+window.scrollTo()
+
+
+
+
+
+
+
 //                child selector                
 var item = document.querySelector('.list-group-item');
 
@@ -19,7 +41,6 @@ var lastItem = document.querySelector('list-group-item: last-child');
 
 var secondItem = document.querySelector('.list-group-item:nth-child(2');
 secon
-
 
 
 document.body.children[0].children[1].setAttribute('href', 'foo')
@@ -111,7 +132,6 @@ document.write(links);
 
 //              Insert For-each
 navBar.forEach((element, i) => {
-  if (i !== 0 && i !== 7)
     element.textContent = siteContent.nav[`nav-item-${i}`];
   element.style.color = "green";
 });
@@ -126,8 +146,6 @@ for (let i = 0; i < navBar.length; i++) {
 
 
 
- 
-
 
 //              input box
 var input = document.querySelector\('input');
@@ -135,6 +153,27 @@ input.value = 'Helllo World';
 
 var submit = document.querySelector(input[type="submit"]);
 submit.value = "SEND"
+
+
+
+//     inserting 2 nav items
+let nav = document.getElementsByTagName('nav')[0];
+
+let navItem1 = document.createElement('a');
+navItem1.textContent = 'FAQ';
+navItem1.style.color = 'green';
+nav.prepend(navItem1);
+
+let navItem2 = document.createElement('a');
+navItem2.textContent = 'Help';
+navItem2.style.color = 'green';
+nav.appendChild(navItem2);
+
+
+
+
+
+
 
 
 
