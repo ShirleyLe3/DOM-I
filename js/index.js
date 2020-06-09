@@ -37,13 +37,6 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
-
-
-
-
 
 // const aNode = document.createElement('a');
 // const a = document.createTextNode('New Item 1');
@@ -56,8 +49,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // let h1Cta = document.querySelector("h1");
 // h1Cta.textContent = siteContent.cta.h1;
-// h1Cta.setAttribute('style', 'width: 40%');
-//              alert for changes
+// h1Cta.setAttribute('style', 'width: 40%');      
 
 // const paragraphs = document.getElementsByTagName("p");
 // // paragraphs[0] is the first <p> element
@@ -65,10 +57,15 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // alert(paragraphs[0].nodeName);
 
 
-//Nav Insert
-// document.body.children[0].children[1].setAttribute('href', 'foo')
+
+//         Navigation
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
 
 //     Nav Links
+// document.body.children[0].children[1].setAttribute('href', 'foo')
 const navLinks = document.querySelector('nav').querySelectorAll('a');
 console.log(navLinks)
 navLinks.forEach((element, i) => {
@@ -76,33 +73,53 @@ navLinks.forEach((element, i) => {
   element.style.color = "green";
 });
 
-// Nav image
-// const navImg = document.querySelector('nav').querySelectorAll('a');
-
-
-
-
+// 
 
 
 
 //        Title Container
-const titleText = document.getElementsByClassName('cta-text');
+const titleText = document.querySelector('cta-text h1');
+titleText.textContent = s.cta.h1;
 console.log(titleText);
 
-const titleImg = document.getElementsByIdName('cta-img');
-titleImg.setAttribute('src', 'header-img.png');
+
+// const titleImg = document.getElementsByIdName('cta-img');
+// titleImg.setAttribute('src', 'header-img.png');
+const titleImg = document.getElementById('cta-img'); 
+navImg.setAttribute("src", s["cta"]["img-src"]);
+
+// flex
+titleText.prepend(titleImg);
 
 
+
+
+
+let ctah1 = document.querySelector(".cta-text h1");
+ctah1.textContent = s.cta.h1;
+
+let ctaButton = document.querySelector("cta-text button");
+ctaButton.textContent = s.cta.button;
 
 //         Main Content
-const content1 = document.getElementsByClassName('top-content').querySelector('div');
+const contenth1 = document.querySelector(".main-content .top-content h4");
+contenth1[0].textContent = s["main-content"]["features-h4"];
+contenth1[1].textContent = s["main-content"]["about-h4"];
+
+const content1 = document.getElementsByClassName('top-content').querySelector('p');
+content1[0].textContent = s["main-content"]["features-content"];
+content1[1].textContent = s["main-content"]["about-content"];
+
 
 const middleImg = document.querySelector('middle-img');
 middleImg.setAttribute('src', 'mid-page-accent.jpg');
+// middleImg.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-const content2 = document.getElementsByClassName('bottom-content').querySelector('div');
-
+const content2 = document.getElementsByClassName('bottom-content').querySelector('p');
+content2[0].textContent = s["main-content"]["services-content"];
+content2[1].textContent = s["main-content"]["product-content"];
+content2[2].textContent = s["main-content"]["vision-content"];
 
 
 
@@ -116,4 +133,22 @@ const contact = document.querySelector('nav').querySelectorAll('a');
 //          Footer
 const footer = document.querySelector('list-group-item: last-child');
 
-.querySelector('p');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

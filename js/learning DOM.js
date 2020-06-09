@@ -15,8 +15,8 @@ console.log(header);
 header.textContent = siteContent;
 
 
-document.getElementById(id)
-document.getElementsByTagName(name)
+document.getElementById('id')
+document.getElementsByTagName('name')
 document.createElement(name)
 parentNode.appendChild(node)
 element.innerHTML
@@ -28,8 +28,11 @@ window.content
 window.onload
 window.scrollTo()
 
-
-
+NodeList.item();
+NodeList.entries();                  //key/value pairs
+NodeList.keys();
+NodeList.values();
+NodeList.forEach();
 
 
 
@@ -48,7 +51,25 @@ document.body.children[0].children[1].setAttribute('href', 'foo')
 document.body.children[0].children[1].children[0].href = ''
 
 
-
+//                  methods
+classList();
+getAttribute();
+setAttricubute();
+appendChild();
+append();
+prepend();
+removeChild();
+removeEventListener();
+createElement;
+innerText;
+textContent;
+innerHTML;
+value;
+parentElement;
+children;
+nextSibling;
+previousSibling;
+style;
 
 
 
@@ -85,6 +106,10 @@ var newDiv = document.createElement('div');
 newDiv.className = 'hello';
 newDiv.setAttribute('title', 'Hello World');
 newDiv.appendChild(newDivText);
+
+const newContent = document.createElement('header');
+const body = document.querySelector('body');
+body.prepend(newContent);
 
 
 
@@ -141,8 +166,12 @@ for (let i = 0; i < navBar.length; i++) {
    navBar[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
  }
 
+links = Array.from(links);
 
-
+links.forEach(link => {
+  link.style.color = 'hotpink';
+  link.textContent = 'changing text';
+});
 
 
 
@@ -196,3 +225,17 @@ console.log(ctaB)
 
 ctaB.textContent = siteContent.cta.button;
 ctaB.style.marginLeft = '22%';
+
+
+
+
+
+
+const cardTitles = {
+  cardTitle1: 'Cats are cool',
+  card
+}
+for (let = 0; i< h2s.length; i++) {
+  const contents = Object.values(cardTitles)
+  h2s[i]. textContent = contents[i]
+}
