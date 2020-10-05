@@ -1,0 +1,241 @@
+//https://www.digitalocean.com/community/tutorials/how-to-modify-attributes-classes-and-styles-in-the-dom
+
+//                 view element
+
+console.log(document.domain);
+console.log(document.URL);
+console.log(document.title);
+
+
+
+
+//                  get element
+var header = document.getElementById('header');
+console.log(header);
+header.textContent = siteContent;
+
+
+document.getElementById('id')
+document.getElementsByTagName('name')
+document.createElement(name)
+parentNode.appendChild(node)
+element.innerHTML
+element.style.left
+element.setAttribute()
+element.getAttribute()
+element.addEventListener()
+window.content
+window.onload
+window.scrollTo()
+
+NodeList.item();
+NodeList.entries();                  //key/value pairs
+NodeList.keys();
+NodeList.values();
+NodeList.forEach();
+
+
+
+
+//                child selector                
+var item = document.querySelector('.list-group-item');
+
+var lastItem = document.querySelector('list-group-item: last-child');
+
+var secondItem = document.querySelector('.list-group-item:nth-child(2');
+secon
+
+
+document.body.children[0].children[1].setAttribute('href', 'foo')
+                          //or
+document.body.children[0].children[1].children[0].href = ''
+
+
+//                  methods
+classList();
+getAttribute();
+setAttricubute();
+appendChild();
+append();
+prepend();
+removeChild();
+removeEventListener();
+createElement;
+innerText;
+textContent;
+innerHTML;
+value;
+parentElement;
+children;
+nextSibling;
+previousSibling;
+style;
+
+
+
+//                  styling
+var headerTitle = document.getElementById('header-title');
+console.log(headerTitle);
+headerTitle.textContent = 'Hello';
+headerTitle.style.borderBottom = 'solid 3px skyblue';
+
+var header = document.querySelector('#main-header');
+header.style.borderBottom = 'solid';
+
+var items = document.getElementsByClassName('list-group-item');
+console.log(items[1]);
+items[1].textContent = 'hello 2';
+items[1].style.fontWeight = '2rem';
+
+
+//             multiple styling
+for (var i = 0; i < items.length; i++) {
+  items[1].style.backgroundColor = 'light-grey';
+}
+for (var i = 0; i < odd.length; i++) {
+  odd[i].style.backgroundColor = "blue";
+  even[i].style.backgroundColor = "pink";
+}  
+
+
+
+
+
+//                create element
+var newDiv = document.createElement('div');
+newDiv.className = 'hello';
+newDiv.setAttribute('title', 'Hello World');
+newDiv.appendChild(newDivText);
+
+const newContent = document.createElement('header');
+const body = document.querySelector('body');
+body.prepend(newContent);
+
+
+
+//          append multiple DOM Nodes
+var divs = Array.from({length:10}) // lets make an array of 10 divs
+.map(function(_,i){
+var el = document.createElement('div');
+    el.textContent = `I am div # ${i}`;
+    return el;
+});
+document.body.append(...divs);
+//===================>
+//I am div #1
+//I am div #2
+//I am div #..
+//I am div #9
+
+
+
+//       Create and place newDiv
+var container = document.querySelector('header . container');
+var h1 = document.querySelector('header h1');
+container.insertBefore(newDiv, h1);
+newDiv.style.fontSize = '30px';
+
+
+
+
+
+
+
+//            Append elements
+document.documentElement.lastElementChild.firstElementChild
+for (let i=0;i<itemsAll.length;i++) {
+     // appending your elements to the body :
+     document.body.appendChild(itemsAll[i]);
+}
+
+//        Insert arrayofLinks in nav
+const arrayofLinks = [{http//:link.com}...{navStuff}]
+let links = arrayofLinks.map((url, i) `<a href="${url}">Link#${i + 1}</a>`);
+document.write(links);
+
+
+
+//              Insert For-each
+navBar.forEach((element, i) => {
+    element.textContent = siteContent.nav[`nav-item-${i}`];
+  element.style.color = "green";
+});
+
+for (let i = 0; i < navBar.length; i++) {
+   navBar[i].style.color = "green";
+   navBar[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+ }
+
+links = Array.from(links);
+
+links.forEach(link => {
+  link.style.color = 'hotpink';
+  link.textContent = 'changing text';
+});
+
+
+
+
+//              input box
+var input = document.querySelector\('input');
+input.value = 'Helllo World';
+
+var submit = document.querySelector(input[type="submit"]);
+submit.value = "SEND"
+
+
+
+//     inserting 2 nav items
+let nav = document.getElementsByTagName('nav')[0];
+
+let navItem1 = document.createElement('a');
+navItem1.textContent = 'FAQ';
+navItem1.style.color = 'green';
+nav.prepend(navItem1);
+
+let navItem2 = document.createElement('a');
+navItem2.textContent = 'Help';
+navItem2.style.color = 'green';
+nav.appendChild(navItem2);
+
+
+
+
+
+
+
+
+
+
+
+//              Nav spacing 
+commit cta = document.getElementById('cta-img');
+cta.setAttribute('src', siteContent["cta"]["img-src"])
+console.log(cta);
+
+const ctaH = document.querySelector("h1");
+console.log(ctaH);
+
+ctaH.textContent = siteContent.cta.h1;
+ctaH.style.wordSpacing = '991px';
+ctaH.style.marginLeft = '25%';
+
+const ctaB = document.querySelector("button");
+console.log(ctaB)
+
+ctaB.textContent = siteContent.cta.button;
+ctaB.style.marginLeft = '22%';
+
+
+
+
+
+
+const cardTitles = {
+  cardTitle1: 'Cats are cool',
+  card
+}
+for (let = 0; i< h2s.length; i++) {
+  const contents = Object.values(cardTitles)
+  h2s[i]. textContent = contents[i]
+}
